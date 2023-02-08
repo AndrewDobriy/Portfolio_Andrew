@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import './Home.css'
+
 const messages = [
   'React/Redux Dev💥',
   'Native JavaScript Dev✅',
-  'Full Stack Dev💻',
+  'NodeJs/Express Dev💻',
 ]
 
 function Home() {
@@ -52,7 +52,7 @@ function Home() {
           </div>
           <div className="profile-details-role">
             <span className="primary-text">
-              <h1>{currentMessage}</h1>
+              <h1 className="w-100">{currentMessage}</h1>
               <span>
                 Knack of builds applications with front and back end operations
               </span>
