@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import hero from '../assets/images/hero.png'
 
 const messages = [
   'React/Redux Dev💥',
@@ -27,43 +28,65 @@ function Home() {
       clearInterval(typingInterval)
     }
   }, [currentIndex])
+
   return (
-    <div className="profile-ccontainer">
-      <div className="profile-parent">
-        <div className="profile-details">
-          <div className="social">
-            <a href="#">
+    <section id="home" className="min-h-screen flex py-10 items-center">
+      <div className="flex-1 flex items-center md:flex-row flex-col justify-center h-full">
+        <img
+          src={hero}
+          alt=""
+          className="md:w-1/2 rounded-3xl object-cover sm:w-1/2 m-5"
+        />
+        <div className="flex-1">
+          <div className="md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold">
+            <span className="text-cyan-600">Hello!</span>
+
+            <span> My name is Andrey</span>
+          </div>
+          <div className="profile-details-role">
+            <h1 className="md:text-3xl md:text-left text-2xl md:leading-normal leading-10 h-10 my-4 text-center">
+              {currentMessage}
+            </h1>
+          </div>
+          <button className="btn-primary my-4 align-middle">Contact me</button>
+
+          <div className="text-3xl flex items-center md:justify-start justify-between">
+            <a
+              className="text-gray-600 hover:text-white cursor-pointer mr-5"
+              href="https://vk.com/dobriy__man"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <i className="fab fa-vk"></i>
             </a>
-            <a href="#">
+            <a
+              className="text-gray-600 hover:text-white cursor-pointer mr-5"
+              href="https://www.facebook.com/profile.php?id=100008393264369"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#">
+            <a
+              className="text-gray-600 hover:text-white cursor-pointer mr-5"
+              href="https://github.com/AndrewDobriy"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <i className="fab fa-github"></i>
             </a>
-            <a href="#">
+            <a
+              className="text-gray-600 hover:text-white cursor-pointer  "
+              href="https://www.instagram.com/dobriy__man/"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <i className="fab fa-instagram"></i>
             </a>
           </div>
-          <div>
-            <span>
-              Hello, I'm <span className="highlighted-text">Andrey</span>
-            </span>
-          </div>
-          <div className="profile-details-role">
-            <span className="primary-text">
-              <h1 className="w-100">{currentMessage}</h1>
-              <span>
-                Knack of builds applications with front and back end operations
-              </span>
-            </span>
-          </div>
-          <div>
-            <button></button>
-          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
