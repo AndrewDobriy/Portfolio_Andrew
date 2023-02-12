@@ -7,6 +7,16 @@ const messages = [
   'NodeJs/Express Dev💻',
 ]
 
+const social_media = [
+  { name: 'fab fa-vk', link: 'https://vk.com/dobriy__man' },
+  {
+    name: 'fab fa-facebook',
+    link: 'https://www.facebook.com/profile.php?id=100008393264369',
+  },
+  { name: 'fab fa-github', link: 'https://github.com/AndrewDobriy' },
+  { name: 'fab fa-instagram', link: 'https://www.instagram.com/dobriy__man/' },
+]
+
 function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -51,38 +61,17 @@ function Home() {
           <button className="btn-primary my-4 align-middle">Contact me</button>
 
           <div className="text-3xl flex items-center md:justify-start justify-between">
-            <a
-              className="text-gray-600 hover:text-white cursor-pointer mr-5"
-              href="https://vk.com/dobriy__man"
-              target={'_blank'}
-              rel="noreferrer"
-            >
-              <i className="fab fa-vk"></i>
-            </a>
-            <a
-              className="text-gray-600 hover:text-white cursor-pointer mr-5"
-              href="https://www.facebook.com/profile.php?id=100008393264369"
-              target={'_blank'}
-              rel="noreferrer"
-            >
-              <i className="fab fa-facebook"></i>
-            </a>
-            <a
-              className="text-gray-600 hover:text-white cursor-pointer mr-5"
-              href="https://github.com/AndrewDobriy"
-              target={'_blank'}
-              rel="noreferrer"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-            <a
-              className="text-gray-600 hover:text-white cursor-pointer  "
-              href="https://www.instagram.com/dobriy__man/"
-              target={'_blank'}
-              rel="noreferrer"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
+            {social_media?.map((icon) => (
+              <a
+                key={icon.name}
+                href={icon.link}
+                target={'_blank'}
+                rel="noreferrer"
+                className="text-gray-600 hover:text-white cursor-pointer mr-5"
+              >
+                <i className={icon.name}></i>
+              </a>
+            ))}
           </div>
         </div>
       </div>

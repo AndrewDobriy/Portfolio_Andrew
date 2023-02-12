@@ -41,7 +41,9 @@ function Navbar() {
       <div className="flex items-center justify-between">
         <div className="mx-7">
           <h4 className="text-4xl uppercase font-bold">
-            Front<span className="text-cyan-600">end</span>
+            <a href="#home" className="cursor-pointer">
+              Front<span className="text-cyan-600">end</span>
+            </a>
           </h4>
         </div>
         <div
