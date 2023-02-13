@@ -13,7 +13,7 @@ function Contact() {
         </h4>
         <a
           href="mailto:an.dobriy@mail.ru"
-          className="text-white text-3xl cursor-pointer mt-3 text-lg bg-line font-bold"
+          className="text-white cursor-pointer mt-3 text-lg bg-line font-bold"
         >
           Let's get in touch!
         </a>
