@@ -13,7 +13,7 @@ body {
 }
 
 .btn-primary {
-  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+  @apply bg-gradient-to-b from-cyan-500 to-blue-500 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2 hover:scale-110 duration-300;
 }
 
 .levitation {
@@ -32,4 +32,25 @@ body {
   100% {
     transform: translateY(-20px);
   }
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white;
+}
+
+input,
+textarea {
+  @apply bg-gray-700 outline-none rounded-lg p-3;
+}
+
+::placeholder {
+  @apply text-lg;
+}
+
+::selection {
+  @apply bg-cyan-600;
+}
+
+.bg-line {
+  background-image: linear-gradient(0deg, #c1403d 10%, transparent 30%);
 }

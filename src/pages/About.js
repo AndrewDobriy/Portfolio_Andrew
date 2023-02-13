@@ -21,7 +21,14 @@ function About() {
         <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 mx-auto">
           <div className="">
             <div className="text-gray-300 my-3 ">
-              <p className="text-justify leading-7">{AboutText}</p>
+              <p className="text-justify leading-7">
+                {AboutText}
+                <br />
+                I've loved building things for web and been working with{' '}
+                <span className="bg-line">
+                  JavaScript (ES6+), HTML & CSS, React, Node.js recently.
+                </span>
+              </p>
               <div>
                 <div className="flex mt-10 items-center justify-around gap-7">
                   {info.map((content) => (

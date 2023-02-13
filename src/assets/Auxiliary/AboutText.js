@@ -1,5 +1,3 @@
-import React from 'react'
-
 const specificDate = new Date('2022-04-01')
 const today = new Date()
 const millisecondsInADay = 86400000

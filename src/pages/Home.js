@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import hero from '../assets/images/hero.png'
 
 const messages = [
-  'React/Redux Dev💥',
-  'Native JavaScript Dev✅',
-  'NodeJs/Express Dev💻',
+  'React/Redux Dev🔥',
+  'Native JavaScript Dev⭐',
+  'NodeJs/Express Dev⚡',
 ]
 
 const social_media = [
@@ -30,7 +30,7 @@ function Home() {
         clearInterval(typingInterval)
         setTimeout(() => {
           setCurrentIndex((currentIndex + 1) % messages.length)
-        }, 500)
+        }, 1000)
       }
     }, 100)
 
@@ -54,11 +54,15 @@ function Home() {
             <span> My name is Andrey</span>
           </div>
           <div className="profile-details-role">
-            <h1 className="md:text-3xl md:text-left text-2xl md:leading-normal leading-10 h-10 my-4 text-center">
+            <h1 className="md:text-3xl md:text-left text-2xl md:leading-normal leading-10 h-10 my-4 text-center text-white">
               {currentMessage}
             </h1>
           </div>
-          <button className="btn-primary my-4 align-middle">Contact me</button>
+          <a href="#contact">
+            <button className="btn-primary my-4 align-middle">
+              Contact me
+            </button>
+          </a>
 
           <div className="text-3xl flex items-center md:justify-start justify-between">
             {social_media?.map((icon) => (

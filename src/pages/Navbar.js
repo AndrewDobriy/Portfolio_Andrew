@@ -28,7 +28,6 @@ function Navbar() {
   ]
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav')
       window.scrollY > 0 ? setSticky(true) : setSticky(false)
     })
   }, [])
@@ -41,7 +40,11 @@ function Navbar() {
       <div className="flex items-center justify-between">
         <div className="mx-7">
           <h4 className="text-4xl uppercase font-bold">
-            <a href="#home" className="cursor-pointer">
+            <a
+              onClick={() => setOpen(false)}
+              href="#home"
+              className="cursor-pointer"
+            >
               Front<span className="text-cyan-600">end</span>
             </a>
           </h4>
@@ -74,7 +77,11 @@ function Navbar() {
         >
           <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-cyan-600">
+              <li
+                onClick={() => setOpen(false)}
+                key={i}
+                className="px-6 hover:text-cyan-600"
+              >
                 <a href={menu?.link}>{menu?.name}</a>
               </li>
             ))}
